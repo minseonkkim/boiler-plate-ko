@@ -1,7 +1,7 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const productSchema = mongoose.Schema({
+const userSchema = mongoose.Schema({
 	name: {
         type: String,
         maxlength: 50
@@ -30,8 +30,8 @@ const productSchema = mongoose.Schema({
     tokenExp: {
         type: Number
     }
-}, { timestamps: true })
+});
 
-const Product = mongoose.model('Product', productSchema);
+const User = mongoose.model('User', userSchema);
 
-module.exports = { Product }
+module.exports = { User }
